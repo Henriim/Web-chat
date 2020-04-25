@@ -23,4 +23,4 @@ $ open http://localhost:3000/
 
 Abra duas abas no navegador para obter a funcionalidade de um chat [http://localhost:3000](http://localhost:3000).
 
-
+![Demonstração](./readme-images/demonstration.gif)

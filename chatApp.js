@@ -10,7 +10,7 @@ const chatApp = (server) =>{
     
     socket.on('message', (data) => {
       console.log(data);
-      socket.broadcast.emit('chatMessages', userId + ' : '+  data);
+      socket.broadcast.emit('chatMessages', userId + ' says : '+  data);
     });
 
     socket.on('disconnect', () =>{
