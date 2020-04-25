@@ -9,7 +9,34 @@
 </head>
 
 <body>
+  {{!-- html from index.hbs --}}
   {{{body}}}
 </body>
+<script>
+  console.log("hello client side");
 
+  const socket = io('/');
+
+  const messageDiv = document.getElementById('message');
+
+  socket.on('chatMessages', data =>{
+    messageDiv.innerHTML += data + '<br>';
+  });
+
+  document.querySelector('button').onclick = (event) =>{
+    const message = document.querySelector('input').value;
+    socket.emit('message', message);
+    messageDiv.innerHTML += 'You:' + message + '<br>';
+    document.querySelector('input').value = '';
+  };
+
+
+  socket.on('connect', () =>{
+    console.log('socket connected');
+  });
+
+   socket.on('disconnect', () =>{
+    console.log('socket disconnected');
+  });
+</script>
 </html>

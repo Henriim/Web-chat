@@ -1,19 +1,19 @@
 # Chat App on Node.js
 
-A simple web chat based on socket.io and Node.js
+![logo-IronHack](readme-images/IronHack_logo.png)
+
+Evento promovido e realizado pela Ironhack no dia 23/04/2020.
+
+O objetivo era apresentar um simples web chat baseado em socket.io e Node.js
 
 ## Tech Stack
-
 - [Node.js](https://nodejs.org/en/download/) - JavaScript runtime Server
 - [Express.js](https://expressjs.com/) - Web framework
 - [HandleBars](https://handlebarsjs.com/) - View Engine
 - [Socke.io](https://handlebarsjs.com/) - Real Time Engine based on WebSockets
 - [Bulma](https://bulma.io/) - CSS framework.
 
-### Setup
-
-- Install [Node](https://nodejs.org/en/download/).
-- Clone the [repo](https://github.com/jocnjr/chat-app-nodejs) or download the [zip file](https://github.com/jocnjr/chat-app-nodejs/archive/master.zip).
+## Comandos
 
 ```
 $ npm install
@@ -21,47 +21,6 @@ $ npm start
 $ open http://localhost:3000/
 ```
 
-Open the browser [http://localhost:3000](http://localhost:3000).
+Abra duas abas no navegador para obter a funcionalidade de um chat [http://localhost:3000](http://localhost:3000).
 
-### 1 - The Basics
 
-Understand the basic data exchange between server and client using socket.
-
-We'll undestand how Node.js deals with events and exchange data.
-
-### 2 - The Timer
-
-We'll send random data and percieve the "real time" feeling.
-
-### 3 - The Chat
-
-Finally. Here's the chat:
-
-- sending data from html from input
-- broadcast data back to all clients
-
-Replace this code on your index.hbs file at: views/index.hbs
-
-```
-<section class="section">
-  <div class="container-fluid">
-    <h1 class="title">
-      {{title}}
-    </h1>
-    <p class="subtitle">
-      welcome to {{title}}!
-    </p>
-    <div class="content" id="message"></div>
-    <hr>
-    <div class="field">
-      <div class="control">
-        <input class="input is-primary is-medium" type="text" name="message" placeholder="type your message">
-      </div>
-    </div>
-    <button class="button is-primary">Send Message</button>
-    <br>
-    <div id="watch_mouse"></div>
-  </div>
-</section>
-
-```
